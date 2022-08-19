@@ -36,7 +36,7 @@ class ListsController < ApplicationController
   # PATCH/PUT /lists/1
   def update
     if @list.update(list_params)
-      redirect_to @list, notice: "list was successfully updated."
+      redirect_to root, notice: "list was successfully updated."
     else
       render :edit, status: :unprocessable_entity
     end
