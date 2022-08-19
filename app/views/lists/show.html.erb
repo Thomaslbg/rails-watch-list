@@ -1,0 +1,13 @@
+
+<div class="container">
+  <h1 class="text-center">My <%= @list.name %> list</h1>
+
+ <div class="grid">
+    <%# <div id="lists"> %>
+      <% @bookmarks.each do |bookmark| %>
+          <%= render bookmark %>
+      <% end %>
+    <%# </div> %>
+  </div>
+</div>
+<%= link_to "back", lists_path %>

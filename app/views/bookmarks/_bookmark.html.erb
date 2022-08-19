@@ -1,0 +1,12 @@
+<div class="card-movie">
+  <img src="<%= bookmark.movie.poster_url%>" />
+  <div class="card-movie-infos">
+    <div>
+      <h2><%= bookmark.movie.title %> - <i class="fa-regular fa-star color-yellow"></i> <%= bookmark.movie.rating %></p></h2>
+      <p><%= bookmark.movie.overview %></p>
+      <p> <strong>Comment: </strong>
+      <%= bookmark.comment %></p>
+      <%= button_to "Remove", bookmark, method: :delete %>
+    </div>
+  </div>
+</div>

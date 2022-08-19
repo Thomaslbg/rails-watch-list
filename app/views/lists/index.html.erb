@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+
+     <h1 class="text-center">My Lists</h1>
+    </div>
+    <div class="col-sm-6">
+      <%= link_to "New list", new_list_path, class: "btn btn-primary m-8  " %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+ <div class="grid">
+    <%# <div id="lists"> %>
+      <% @lists.each do |list| %>
+          <%= render list %>
+      <% end %>
+    <%# </div> %>
+  </div>
+</div>
