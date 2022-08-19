@@ -1,17 +1,23 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(<%= image_path("default-bg.jpg") %>);">
+  <div class="container">
+    <h1>My <strong>movie</strong> lists</strong>!</h1>
+    <p>Manage your backlog of movies</p>
+    <%= link_to "New list", new_list_path, class: "btn btn-primary m-8  " %>
+    <%# <a class="btn btn-flat" href="#">Apply now</a> %>
+  </div>
+</div>
+
 <p style="color: green"><%= notice %></p>
-<div class="container">
+<div class="container mt-3">
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-12">
 
      <h1 class="text-center">My Lists</h1>
-    </div>
-    <div class="col-sm-6">
-      <%= link_to "New list", new_list_path, class: "btn btn-primary m-8  " %>
     </div>
   </div>
 </div>
 
-<div class="container">
+<div class="container mt-3">
  <div class="grid">
     <%# <div id="lists"> %>
       <% @lists.each do |list| %>

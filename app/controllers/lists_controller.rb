@@ -17,10 +17,6 @@ class ListsController < ApplicationController
     @list = List.new
   end
 
-  # GET /lists/1/edit
-  def edit
-  end
-
   # POST /lists
   def create
     @list = List.new(list_params)
@@ -45,7 +41,7 @@ class ListsController < ApplicationController
   # DELETE /lists/1
   def destroy
     @list.destroy
-    redirect_to lists_url, notice: "list was successfully destroyed."
+    redirect_to root_url, notice: "list was successfully destroyed."
   end
 
   private
@@ -56,6 +52,6 @@ class ListsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def list_params
-      params.require(:list).permit(:name, :phone_number, :address, :category)
+      params.require(:list).permit(:name, :phone_number, :address, :category, :list_image)
     end
   end

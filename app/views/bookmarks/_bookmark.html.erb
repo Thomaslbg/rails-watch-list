@@ -2,11 +2,19 @@
   <img src="<%= bookmark.movie.poster_url%>" />
   <div class="card-movie-infos">
     <div>
-      <h2><%= bookmark.movie.title %> - <i class="fa-regular fa-star color-yellow"></i> <%= bookmark.movie.rating %></p></h2>
+      <h2><%= bookmark.movie.title %> - <i class="fa-regular fa-star color-yellow"></i> <%= bookmark.movie.rating %></h2>
       <p><%= bookmark.movie.overview %></p>
-      <p> <strong>Comment: </strong>
-      <%= bookmark.comment %></p>
-      <%= button_to "Remove", bookmark, method: :delete %>
+
+      <div class="d-flex justify-content-between mt-2 comment">
+        <div>
+          <p> <strong>Comment: </strong><%= bookmark.comment %></p>
+        </div>
+        <div class = "d-flex align-content-end">
+          <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"text-decoration-none text-danger mt-auto" do %>
+            <i class="fa-solid fa-trash"></i>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
